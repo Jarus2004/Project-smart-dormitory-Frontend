@@ -1,0 +1,38 @@
+.page { min-height: 100vh; background: #f7f8fc; color: #172033; }
+.header { max-width: 1040px; margin: 0 auto; padding: 20px 24px 8px; display: flex; justify-content: space-between; align-items: center; }
+.backButton { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px; border: 1px solid #e2e8f0; background: #ffffff; color: #475569; font-weight: 600; font-size: .88rem; cursor: pointer; box-shadow: 0 2px 4px rgba(15, 23, 42, .04); transition: all .2s ease; }
+.backButton:hover { background: #f8fafc; border-color: #cbd5e1; color: #0f172a; transform: translateX(-2px); }
+.main { width: min(900px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0; }
+.heading { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; }
+.headingIcon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: #dff3f5; color: #126782; }
+.eyebrow { margin: 0 0 .25rem; color: #126782; font-size: .7rem; font-weight: 700; letter-spacing: .08em; }
+.heading h1 { margin: 0; font-size: 1.45rem; }
+.heading p:last-child { margin: .35rem 0 0; color: #657084; font-size: .9rem; }
+.error { display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; padding: .75rem 1rem; border: 1px solid #fecaca; border-radius: 8px; background: #fff1f2; color: #b42318; font-size: .85rem; }
+.billList { display: grid; gap: 1rem; }
+.billCard { padding: 1.25rem; border: 1px solid #e4e8f0; border-radius: 10px; background: #fff; box-shadow: 0 6px 18px rgba(23, 32, 51, .04); }
+.billTop { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.billLabel, .description, .dueDate { margin: 0; color: #657084; font-size: .82rem; }
+.billTop h2 { margin: .35rem 0 0; font-size: 1.35rem; }
+.description { margin-top: 1rem; color: #344054; }
+.dueDate { margin-top: .35rem; }
+.status { display: inline-flex; align-items: center; gap: .25rem; padding: .35rem .65rem; border-radius: 999px; font-size: .75rem; font-weight: 700; white-space: nowrap; }
+.warning { background: #fff7d6; color: #9a6700; }
+.danger { background: #fff0f0; color: #b42318; }
+.info { background: #e9f4ff; color: #175cd3; }
+.success { background: #e8f7ee; color: #067647; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.1rem; }
+.qrButton, .fileButton, .submitButton { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 38px; padding: 0 .8rem; border-radius: 7px; font-size: .8rem; font-weight: 600; cursor: pointer; }
+.qrButton { border: 1px solid #9ad7df; background: #f1fcfd; color: #126782; }
+.fileButton { border: 1px dashed #aab4c3; background: #fff; color: #344054; max-width: 230px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fileButton input { display: none; }
+.submitButton { border: 0; background: #126782; color: #fff; }
+.qrButton:disabled, .submitButton:disabled { cursor: wait; opacity: .65; }
+.qrPanel { display: flex; flex-direction: column; align-items: center; gap: .5rem; margin-top: 1rem; padding: 1rem; border-radius: 8px; background: #f7fafc; }
+.qrPanel img { width: 220px; height: 220px; object-fit: contain; }
+.qrPanel p { margin: 0; color: #657084; font-size: .8rem; text-align: center; }
+.empty { display: flex; flex-direction: column; align-items: center; gap: .5rem; padding: 4rem 1rem; color: #8a94a6; }
+.empty p { margin: 0; }
+.spinner { animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 620px) { .header { padding: 20px 1rem 8px; } .main { width: min(100% - 1.25rem, 900px); padding-top: 1.5rem; } .actions > * { flex: 1 1 100%; } .fileButton { max-width: none; } }

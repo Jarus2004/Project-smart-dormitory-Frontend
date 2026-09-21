@@ -1,0 +1,168 @@
+.footer {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 60px 20px 30px;
+  color: #334155;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #eff6ff;
+}
+
+.brandName {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brandSub {
+  font-size: 11px;
+  color: #64748b;
+  display: block;
+}
+
+.desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  max-width: 300px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.colTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 20px;
+  position: relative;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  font-size: 14px;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #2563eb;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.contactIcon {
+  color: #2563eb;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.bottom {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+@media (max-width: 992px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

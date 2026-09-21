@@ -1,0 +1,98 @@
+.card {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.roomNumber {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.meta {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  align-self: start;
+}
+
+.occupied {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.maintenance {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.available {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.occupancyRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.progressTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #60a5fa);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.footerLabel {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.footerValue {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.buildingPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  color: var(--primary);
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}

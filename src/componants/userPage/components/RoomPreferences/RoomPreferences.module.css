@@ -1,0 +1,512 @@
+.card {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+  min-width: 0;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+  color: #334155;
+}
+
+.field span {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.85rem;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  background: #ffffff;
+}
+
+/* ─── Random Room Checkbox ────────────────────────────────────────── */
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.1rem;
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.checkboxContainer:hover {
+  background: #dcfce7;
+  border-color: #4ade80;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #16a34a;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxTitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #166534;
+}
+
+.checkboxDesc {
+  font-size: 0.8rem;
+  color: #15803d;
+}
+
+/* ─── Top Bar inside Room Section ─────────────────────────────────── */
+.roomSectionTopBar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.floorSelectField {
+  display: grid;
+  gap: 0.4rem;
+  color: #334155;
+}
+
+.floorSelectField span {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.floorSelectField select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 0.85rem;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.floorSelectField select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ─── Room Grid Section ───────────────────────────────────────────── */
+.roomSection {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.roomSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.roomSectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legendBar {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dotAvailable {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+.dotSelected {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.dotOccupied {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+/* 30 Rooms Grid: 5 columns x 6 rows */
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6rem;
+  max-height: 380px;
+  overflow-y: auto;
+  min-width: 0;
+  padding-right: 0.25rem;
+}
+
+/* Custom Scrollbar for room grid */
+.roomGrid::-webkit-scrollbar {
+  width: 5px;
+}
+.roomGrid::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+.roomGrid::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Individual Room Card */
+.roomCard {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 0.65rem;
+  padding: 0.6rem 0.35rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 58px;
+}
+
+.roomCard:hover:not(.roomCardDisabled):not(.roomCardDimmed) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+}
+
+.roomNumber {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.roomBadge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-top: 3px;
+  display: inline-block;
+}
+
+.badgeAvailable {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badgeOccupied {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* Selected Room Card State */
+.roomCardSelected {
+  background: #eff6ff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #2563eb, 0 6px 14px rgba(37, 99, 235, 0.2);
+  transform: scale(1.02);
+}
+
+.roomCardSelected .roomNumber {
+  color: #1d4ed8;
+}
+
+.roomCardSelected .badgeAvailable {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* Occupied Room Card State */
+.roomCardDisabled {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.roomCardDisabled .roomNumber {
+  color: #94a3b8;
+}
+
+/* When Random Room is active, dim manual grid */
+.roomCardDimmed {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Selected Info Pill */
+.selectedRoomAlert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  color: #1e40af;
+  font-size: 0.88rem;
+}
+
+.randomRoomAlert {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  color: #166534;
+  font-size: 0.88rem;
+}
+
+/* Notes Card */
+.notesCard {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #fdf2f8;
+  border: 1px solid #fbcfe8;
+  color: #3f0712;
+}
+
+.notesCard span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.notesCard ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #4c0519;
+}
+
+.notesCard li {
+  margin-bottom: 0.5rem;
+}
+
+/* ─── PromptPay QR Code styling ───────────────────────────────────── */
+.promptPayContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #eff6ff;
+  border: 2px dashed #3b82f6;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.promptPayHeader {
+  background: #003780;
+  color: white;
+  width: 100%;
+  max-width: 250px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.promptPayLogoText {
+  color: #ffffff;
+}
+
+.promptPayLogoDot {
+  color: #eab308;
+}
+
+.qrPlaceholder {
+  width: 180px;
+  height: 180px;
+  background: white;
+  border: 6px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.qrImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.amountTitle {
+  font-size: 0.9rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.amountValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.paymentInstruction {
+  font-size: 0.85rem;
+  color: #334155;
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .promptPayContainer {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .roomSection {
+    padding: 0.85rem;
+  }
+
+  .roomSectionHeader,
+  .legendBar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .roomGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  .roomCard {
+    min-height: 54px;
+    padding-inline: 0.2rem;
+  }
+
+  .roomNumber {
+    font-size: 0.85rem;
+  }
+
+  .roomBadge {
+    font-size: 0.6rem;
+  }
+
+  .selectedRoomAlert,
+  .randomRoomAlert {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .promptPayContainer {
+    padding: 1rem;
+  }
+
+  .qrPlaceholder {
+    width: min(180px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+  }
+}

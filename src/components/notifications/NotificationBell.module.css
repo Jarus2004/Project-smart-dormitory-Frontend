@@ -1,0 +1,10 @@
+.wrapper { position: relative; margin-left: auto; }
+.trigger { position: relative; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #dbe7f3; border-radius: 12px; background: #fff; color: #557184; cursor: pointer; transition: .2s ease; }
+.trigger:hover, .trigger.active { border-color: #9fc4fa; background: #eff6ff; color: #2563eb; }
+.unreadDot { position: absolute; top: 3px; right: 3px; width: 9px; height: 9px; border: 2px solid #fff; border-radius: 50%; background: #ef4444; }
+.panel { position: absolute; z-index: 110; top: 50px; right: 0; width: min(360px, calc(100vw - 32px)); overflow: hidden; border: 1px solid #dbe7f3; border-radius: 14px; background: #fff; box-shadow: 0 18px 40px rgba(30, 64, 89, .18); }
+.panelHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 15px; border-bottom: 1px solid #edf2f7; }
+.panelHeader div { display: grid; gap: 3px; }.panelHeader strong { color: #17354b; }.panelHeader span { color: #7b91a1; font-size: .74rem; }
+.clearButton { display: inline-flex; align-items: center; gap: 5px; border: 0; background: transparent; color: #2563eb; cursor: pointer; font-size: .76rem; font-weight: 700; white-space: nowrap; }
+.list { max-height: 340px; overflow: auto; }.empty { margin: 0; padding: 28px 16px; color: #7b91a1; font-size: .82rem; text-align: center; }
+.item { display: flex; gap: 10px; padding: 12px 14px; border-bottom: 1px solid #f0f4f8; border-left: 3px solid #60a5fa; }.item:last-child { border-bottom: 0; }.itemText { display: grid; gap: 4px; min-width: 0; flex: 1; }.itemText strong { color: #17354b; font-size: .8rem; }.itemText span { color: #557184; font-size: .75rem; line-height: 1.4; overflow-wrap: anywhere; }.itemUnreadDot { align-self: flex-start; width: 7px; height: 7px; margin-top: 4px; border-radius: 50%; background: #ef4444; }.unread .itemText strong { color: #102a43; }.success { border-left-color: #22c55e; }.warning { border-left-color: #f59e0b; }.error { border-left-color: #ef4444; }

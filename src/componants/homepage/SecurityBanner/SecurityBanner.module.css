@@ -1,0 +1,87 @@
+.banner {
+  max-width: 1000px;
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.leftIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+  flex-grow: 1;
+  min-width: 0;
+  z-index: 2;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.description {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  overflow-wrap: anywhere;
+}
+
+.rightIcon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.05;
+  color: #64748b;
+  pointer-events: none;
+  z-index: 1;
+}
+.shieldBlue {
+  color: #2563eb;
+}
+.shieldWatermark {
+  opacity: 0.15;
+}
+
+@media (max-width: 560px) {
+  .banner {
+    align-items: flex-start;
+    gap: 12px;
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  .leftIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .rightIcon {
+    right: 8px;
+  }
+}

@@ -1,0 +1,123 @@
+.navbar {
+  position: relative;
+  height: 80px;
+  padding: 0 clamp(16px, 5vw, 50px);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+  background: white;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.logo {
+  min-width: 0;
+}
+
+.logo h2 {
+  color: #2563eb;
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  white-space: nowrap;
+}
+
+.menu a {
+  color: #334155;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #2563eb;
+}
+
+.menu a.loginBtn:hover {
+  background: #1d4ed8;
+  color: white;
+}
+
+.loginBtn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menuButton {
+  display: none;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  padding: 8px;
+  background: white;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.divider {
+  margin-top: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    height: auto;
+    min-height: 68px;
+    padding-block: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menuButton {
+    display: inline-grid;
+    place-items: center;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .menu li {
+    padding: 12px;
+  }
+
+  .menu a {
+    display: block;
+  }
+
+  .loginBtn {
+    display: block;
+    text-align: center;
+  }
+}

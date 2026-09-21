@@ -1,0 +1,205 @@
+.card {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+  min-width: 0;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.cardSubtitle {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.contractHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.contractHeaderTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contractHeaderTitle h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+.autoFillBadge {
+  display: inline-block;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.editToggleButton {
+  background: #0f766e;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.editToggleButton:hover {
+  background: #115e59;
+}
+
+.contractPaper {
+  background: #fdfbf7;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  font-family: 'Sarabun', 'TH Sarabun New', sans-serif, system-ui;
+  color: #1f2937;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.contractPaperTitle {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+.contractRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.85rem;
+  align-items: center;
+}
+
+.contractFieldVal {
+  font-weight: 700;
+  color: #1e3a8a;
+  border-bottom: 1px dotted #1e3a8a;
+  padding: 0 0.3rem;
+  min-width: 60px;
+  display: inline-block;
+}
+
+.contractInput {
+  border: 1px solid #3b82f6;
+  background: #eff6ff;
+  border-radius: 0.375rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  color: #1e40af;
+  font-weight: 600;
+  outline: none;
+  max-width: 100%;
+}
+
+.contractSectionTitle {
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.contractList {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 1rem 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contractSignatures {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+}
+
+.signatureBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.signatureLine {
+  width: 180px;
+  border-bottom: 1px dashed #6b7280;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .contractPaper {
+    padding: 1.5rem 1rem;
+  }
+
+  .contractSignatures {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .contractHeader {
+    align-items: stretch;
+  }
+
+  .editToggleButton {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contractPaper {
+    padding: 1.25rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .contractPaperTitle {
+    font-size: 1.1rem;
+  }
+
+  .contractInput {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .signatureLine {
+    width: min(180px, 100%);
+  }
+}
