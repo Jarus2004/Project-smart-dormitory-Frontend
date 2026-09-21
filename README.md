@@ -2,8 +2,6 @@
 
 Frontend สำหรับระบบจัดการหอพัก พัฒนาด้วย React, TypeScript และ Vite เพื่อให้ผู้ดูแลหอพักและนักศึกษาจัดการข้อมูลห้องพัก ค่าใช้จ่าย การแจ้งซ่อม และผู้มาติดต่อผ่านเว็บแอปพลิเคชันเดียว
 
-> โปรเจกต์นี้จัดทำเพื่อแสดงทักษะด้าน Frontend Development, การออกแบบระบบแบบ Modular และการเชื่อมต่อ API สำหรับใช้ประกอบ Portfolio สมัครฝึกงาน
-
 ## Frontend Highlights
 
 - Dashboard สำหรับ Admin พร้อมข้อมูลห้องพัก นักศึกษา รายรับ-รายจ่าย และงานแจ้งซ่อม
@@ -17,8 +15,6 @@ Frontend สำหรับระบบจัดการหอพัก พั�
 - รองรับหน้า Monitor สำหรับแสดงสถานะการเข้าออกและผลการตรวจสอบจาก backend
 
 ## My Contributions
-
-ส่วนที่สามารถใช้พูดคุยระหว่างสัมภาษณ์ได้:
 
 - พัฒนาและปรับปรุงหน้าจอ Admin Dashboard และหน้าจัดการข้อมูลหลักของหอพัก
 - พัฒนา flow การสมัครเข้าพัก ตั้งแต่กรอกข้อมูล อัปโหลดเอกสาร เลือกห้อง จนถึงตรวจสอบสัญญา
@@ -58,38 +54,6 @@ src/
 
 การเชื่อมต่อข้อมูลใช้ `src/services/api.ts` เป็น Axios instance กลาง และใช้ `src/services/realtime.ts` สำหรับ Socket.IO โดย frontend รับ URL ของ backend ผ่าน environment variable `VITE_API_URL`
 
-## Getting Started
-
-### Prerequisites
-
-- Bun หรือ Node.js ที่รองรับการทำงานของ Vite
-- Backend API ของ Smart Dormitory ที่กำลังทำงานอยู่ หากต้องการทดสอบ flow ที่เชื่อมต่อข้อมูลจริง
-- Git
-
-### Installation
-
-```bash
-git clone <your-repository-url>
-cd <repository-folder>
-bun install
-```
-
-### Environment Variables
-
-สร้างไฟล์ `.env` ที่ root ของโปรเจกต์:
-
-```env
-VITE_API_URL=http://localhost:3000/api
-```
-
-### Run Development Server
-
-```bash
-bun run dev
-```
-
-จากนั้นเปิด URL ที่ Vite แสดงใน terminal โดยทั่วไปคือ `http://localhost:5173`
-
 ## Available Scripts
 
 ```bash
@@ -102,18 +66,37 @@ bun run preview   # Preview production build locally
 
 ## Screenshots and Demo
 
-เพิ่มภาพหน้าจอหรือวิดีโอสาธิตในส่วนนี้ก่อนนำไปใช้ใน Portfolio:
+- Client
+<p align="center">
+  <img src="screenshot/homePage.png" width="600">
+</p>
 
-- Live Demo: `<add-demo-url>`
-- GitHub Repository: `<add-github-url>`
-- Project Presentation: `<add-presentation-url>`
+<p align="center">
+  <img src="screenshot/login.png" width="600">
+</p>
+
+<p align="center">
+  <img src="screenshot/register.png" width="600">
+</p>
+
+<p align="center">
+  <img src="screenshot/userHomepage.png" width="600">
+</p>
+
+- Admin
+<p align="center">
+  <img src="screenshot/dashbroad.png" width="600">
+</p>
+
+<p align="center">
+  <img src="screenshot/payAdmin.png" width="600">
+</p>
 
 ## What I Learned
 
 - การออกแบบ Frontend แบบ Modular ที่แบ่ง feature และความรับผิดชอบอย่างชัดเจน
 - การจัดการ authentication, protected routes และ session ที่หมดอายุ
-- การเชื่อมต่อ API จริง รวมถึง loading, empty, success และ error states
-- การจัดการข้อมูล realtime และ notification lifecycle ด้วย Socket.IO
+- การเชื่อมต่อ API จริง 
 - การทำ responsive interface สำหรับ workflow ของ Admin และ Student
 - การตรวจสอบคุณภาพโค้ดด้วย lint, build และ automated tests
 
@@ -123,12 +106,7 @@ bun run preview   # Preview production build locally
 
 ## Author
 
-- Name: `<your-name>`
-- Role: Frontend Developer Intern Applicant
-- Email: `<your-email>`
-- GitHub: `<your-github-url>`
-- LinkedIn: `<your-linkedin-url>`
-
-## License
-
-โปรเจกต์นี้จัดทำเพื่อการศึกษาและใช้ประกอบ Portfolio
+- Name: `<Jarus>`
+- Role: Frontend Developer
+- Email: `<jarus2547@gmail.com>`
+- GitHub: `<https://github.com/Jarus2004/>`
